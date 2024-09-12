@@ -1,292 +1,318 @@
 /* Estilos gerais */
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f0f8ff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Define a fonte geral da página */
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o padding padrão */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura dos elementos */
+  background-color: #f0f8ff; /* Define a cor de fundo da página */
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-direction: column; /* Alinha os itens no eixo vertical */
+  min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
 }
 
+/* Estilo do cabeçalho */
 header {
-  background-color: #333;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 10rem;
-  align-items: center;
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+  background-color: #333; /* Cor de fundo escura para o cabeçalho */
+  text-align: center; /* Centraliza o texto no cabeçalho */
+  display: flex; /* Usa o modelo de layout flexível para o cabeçalho */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  gap: 10rem; /* Espaço entre os itens do cabeçalho */
+  align-items: center; /* Alinha o conteúdo verticalmente no centro */
+  padding: 1rem; /* Padding interno do cabeçalho */
 }
 
 .title {
-  margin: 0%;
-  color: white;
+  margin: 0; /* Remove a margem do título */
+  color: white; /* Define a cor do texto do título como branca */
 }
+
+/* Navegação */
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
+  list-style-type: none; /* Remove os marcadores da lista */
+  margin: 0; /* Remove a margem padrão da lista */
+  padding: 0; /* Remove o padding padrão da lista */
+  display: flex; /* Usa o modelo de layout flexível para a lista */
+  gap: 2rem; /* Espaço entre os itens da lista */
 }
 
 nav ul li {
-  display: inline;
+  display: inline; /* Exibe os itens da lista em linha */
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: white; /* Define a cor dos links como branca */
+  font-weight: bold; /* Define o texto dos links como negrito */
+  font-size: 1.3rem; /* Define o tamanho da fonte dos links */
 }
+
 nav ul li a:hover {
-  border-radius: 1rem;
-  padding: 1rem;
-  border: 0.2rem solid #464846;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem; /* Arredonda os cantos do link quando o cursor está sobre ele */
+  padding: 1rem; /* Adiciona padding ao link quando o cursor está sobre ele */
+  border: 0.2rem solid #464846; /* Adiciona uma borda ao link quando o cursor está sobre ele */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao link quando o cursor está sobre ele */
 }
+
 /* Seção Welcome */
 #welcome {
-  text-align: center;
-  padding: 2rem;
+  text-align: center; /* Centraliza o texto na seção Welcome */
+  padding: 2rem; /* Adiciona padding interno na seção Welcome */
 }
 
 /* Estilo do Banner */
 #banner img {
-  width: 100%;
-  height: 25rem;
-  object-fit: cover;
-}
-#carrossel {
-  padding: 20px;
+  width: 100%; /* Faz com que a imagem do banner ocupe toda a largura disponível */
+  height: 25rem; /* Define a altura da imagem do banner */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
 }
 
-/* Estilo para o container das imagens */
+/* Seção do Carrossel */
+#carrossel {
+  padding: 20px; /* Adiciona padding interno na seção do carrossel */
+}
+
+/* Estilo para o container das imagens do carrossel */
 .container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-wrap: nowrap;
-  flex: 0 0 auto;
-  box-sizing: border-box;
-  overflow-x: auto;
-  gap: 4rem;
-  padding: 10px;
+  display: flex; /* Usa o modelo de layout flexível para o container */
+  width: 100%; /* Define a largura do container como 100% */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  flex-wrap: nowrap; /* Impede que os itens se movam para a linha seguinte */
+  flex: 0 0 auto; /* Impede que o container encolha ou expanda */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura dos elementos */
+  overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se necessário */
+  gap: 4rem; /* Espaço entre os itens do carrossel */
+  padding: 10px; /* Adiciona padding interno no container */
 }
 
 figure {
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  border: 0.2rem solid #45a049;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  margin: 0; /* Remove a margem padrão dos elementos figure */
+  position: relative; /* Posiciona os elementos internos de forma relativa */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites do figure */
+  border-radius: 1rem; /* Arredonda os cantos do figure */
+  border: 0.2rem solid #45a049; /* Adiciona uma borda ao redor do figure */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do figure */
 }
 
 picture img {
-  width: 22rem;
-  height: 16rem;
+  width: 22rem; /* Define a largura das imagens dentro do picture */
+  height: 16rem; /* Define a altura das imagens dentro do picture */
 }
 
 figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+  position: absolute; /* Posiciona o figcaption de forma absoluta dentro do figure */
+  bottom: 0; /* Alinha o figcaption na parte inferior do figure */
+  left: 0; /* Alinha o figcaption à esquerda do figure */
+  right: 0; /* Alinha o figcaption à direita do figure */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Define o fundo do figcaption com uma cor preta semi-transparente */
+  color: #fff; /* Define a cor do texto do figcaption como branca */
+  padding: 10px; /* Adiciona padding interno ao figcaption */
+  text-align: center; /* Centraliza o texto dentro do figcaption */
 }
 
 figcaption h2 {
-  font-size: 1rem;
-  margin: 0;
+  font-size: 1rem; /* Define o tamanho da fonte do título dentro do figcaption */
+  margin: 0; /* Remove a margem do título */
 }
 
 figcaption p {
-  font-size: 0.8rem;
-  margin: 5px 0 0;
+  font-size: 0.8rem; /* Define o tamanho da fonte do parágrafo dentro do figcaption */
+  margin: 5px 0 0; /* Adiciona uma margem ao parágrafo */
 }
 
 /* Formulário */
 #contato {
-  padding: 4rem;
+  padding: 4rem; /* Adiciona padding interno na seção de contato */
 }
+
 .icone {
-  border-radius: 50%;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-  width: 12rem;
-  height: 12rem;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+  border-radius: 50%; /* Arredonda os cantos do ícone para criar um círculo */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do ícone */
+  width: 12rem; /* Define a largura do ícone */
+  height: 12rem; /* Define a altura do ícone */
+  object-fit: cover; /* Garante que o ícone cubra a área sem distorcer */
+  display: block; /* Exibe o ícone como um bloco */
+  margin: 0 auto; /* Centraliza o ícone horizontalmente */
 }
+
 .links {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  gap: 2rem;
+  display: flex; /* Usa o modelo de layout flexível para os links */
+  justify-content: center; /* Centraliza os links horizontalmente */
+  padding: 2rem; /* Adiciona padding interno aos links */
+  gap: 2rem; /* Espaço entre os links */
 }
+
 .iconelinks {
-  border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
+  border-radius: 50%; /* Arredonda os cantos dos ícones dos links para criar um círculo */
+  width: 4rem; /* Define a largura dos ícones dos links */
+  height: 4rem; /* Define a altura dos ícones dos links */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor dos ícones dos links */
+  object-fit: cover; /* Garante que os ícones cubram a área sem distorcer */
+  display: block; /* Exibe os ícones como blocos */
+  margin: 0 auto; /* Centraliza os ícones horizontalmente */
 }
+
 .dados {
-  display: flex;
-  justify-content: center;
-  border: 0.2rem solid #45a049;
-  background-color: #dfe8f0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
-  padding: 1rem;
-  gap: 1rem;
+  display: flex; /* Usa o modelo de layout flexível para o container de dados */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  border: 0.2rem solid #45a049; /* Adiciona uma borda ao redor do container de dados */
+  background-color: #dfe8f0; /* Define a cor de fundo do container de dados */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do container de dados */
+  border-radius: 1rem; /* Arredonda os cantos do container de dados */
+  padding: 1rem; /* Adiciona padding interno ao container de dados */
+  gap: 1rem; /* Espaço entre os itens dentro do container de dados */
 }
 
 .titleform {
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: center; /* Centraliza o texto do título do formulário */
+  margin-bottom: 2rem; /* Adiciona margem inferior ao título do formulário */
 }
+
 .informaContatos {
-  width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
+  width: 100%; /* Define a largura do formulário como 100% */
+  padding: 2rem; /* Adiciona padding interno ao formulário */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura do formulário */
 }
+
 .mapa {
-  padding: 2rem;
+  padding: 2rem; /* Adiciona padding interno à seção do mapa */
 }
+
 .maps {
-  width: 100%;
-  height: 80%;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
-  max-width: 100%;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
-  border: 0.1rem solid #45a049;
+  width: 100%; /* Define a largura do mapa como 100% */
+  height: 80%; /* Define a altura do mapa como 80% */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do mapa */
+  max-width: 100%; /* Garante que o mapa não ultrapasse a largura máxima */
+  border-radius: 0.5rem; /* Arredonda os cantos do mapa */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura do mapa */
+  border: 0.1rem solid #45a049; /* Adiciona uma borda ao redor do mapa */
 }
+
 form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #dfe8f0;
-  gap: 1rem;
-  max-width: 100%;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-sizing: border-box;
+  width: 100%; /* Define a largura do formulário como 100% */
+  display: flex; /* Usa o modelo de layout flexível para o formulário */
+  flex-direction: column; /* Alinha os itens do formulário verticalmente */
+  background-color: #dfe8f0; /* Define a cor de fundo do formulário */
+  gap: 1rem; /* Espaço entre os campos do formulário */
+  max-width: 100%; /* Garante que o formulário não ultrapasse a largura máxima */
+  padding: 2rem; /* Adiciona padding interno ao formulário */
+  border-radius: 0.5rem; /* Arredonda os cantos do formulário */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura do formulário */
 }
 
 label {
-  font-weight: bold;
+  font-weight: bold; /* Define o texto dos rótulos como negrito */
 }
 
 input,
 textarea {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  border: 0.1rem solid #ccc;
-  box-sizing: border-box;
+  padding: 0.5rem; /* Adiciona padding interno aos campos de entrada e textarea */
+  font-size: 1rem; /* Define o tamanho da fonte dos campos de entrada e textarea */
+  border-radius: 0.25rem; /* Arredonda os cantos dos campos de entrada e textarea */
+  border: 0.1rem solid #ccc; /* Adiciona uma borda leve aos campos de entrada e textarea */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura dos campos de entrada e textarea */
 }
 
 textarea {
-  width: 100%;
-  resize: vertical;
+  width: 100%; /* Define a largura do textarea como 100% */
+  resize: vertical; /* Permite que o textarea seja redimensionado verticalmente */
 }
 
 button {
-  padding: 0.7rem;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  width: 100%;
-  max-width: 12rem;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  padding: 0.7rem; /* Adiciona padding interno ao botão */
+  background-color: #4caf50; /* Define a cor de fundo do botão */
+  color: white; /* Define a cor do texto do botão como branca */
+  border: none; /* Remove a borda padrão do botão */
+  width: 100%; /* Define a largura do botão como 100% */
+  max-width: 12rem; /* Define a largura máxima do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+  border-radius: 0.5rem; /* Arredonda os cantos do botão */
+  font-size: 1rem; /* Define o tamanho da fonte do botão */
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #45a049; /* Altera a cor de fundo do botão quando o cursor está sobre ele */
 }
 
 /* Seção Sobre */
 #sobre {
-  text-align: center;
-  padding: 2rem;
+  text-align: center; /* Centraliza o texto na seção Sobre */
+  padding: 2rem; /* Adiciona padding interno à seção Sobre */
 }
 
+#politica{
+  padding: 2rem;
+}
+#termos{
+  padding: 4rem;
+}
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #333; /* Cor de fundo escura para o cabeçalho */
   color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto; /* Garante que o footer fique no fundo da página quando há pouco conteúdo */
+  text-align: center; /* Centraliza o texto no cabeçalho */
+  display: flex; /* Usa o modelo de layout flexível para o cabeçalho */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  gap: 10rem; /* Espaço entre os itens do cabeçalho */
+  align-items: center; /* Alinha o conteúdo verticalmente no centro */
+  padding: 1rem; /* Padding interno do cabeçalho */
 }
 /* Estilo para o layout mobile */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: column; /* Alinha os itens do cabeçalho verticalmente em telas menores */
+    text-align: center; /* Centraliza o texto no cabeçalho */
   }
 
   .titleform {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Reduz o tamanho da fonte do título do formulário em telas menores */
   }
 
   picture img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ajusta a largura da imagem do carrossel para 100% em telas menores */
+    height: auto; /* Ajusta a altura da imagem do carrossel para manter a proporção */
   }
 
   figcaption h2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Reduz o tamanho da fonte do título do figcaption em telas menores */
   }
 
   figcaption p {
-    font-size: 1rem;
+    font-size: 1rem; /* Reduz o tamanho da fonte do parágrafo do figcaption em telas menores */
   }
 
   .container {
-    gap: 2rem;
-    overflow-x: visible;
-    flex-direction: column;
-    width: 100%;
+    gap: 2rem; /* Reduz o espaço entre os itens do carrossel em telas menores */
+    overflow-x: visible; /* Remove a barra de rolagem horizontal em telas menores */
+    flex-direction: column; /* Alinha os itens do carrossel verticalmente em telas menores */
+    width: 100%; /* Ajusta a largura do container para 100% em telas menores */
   }
 
   .dados {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Alinha os itens do container de dados verticalmente em telas menores */
+    align-items: center; /* Centraliza os itens dentro do container de dados */
   }
 
   .maps {
-    height: 15rem;
+    height: 15rem; /* Reduz a altura do mapa em telas menores */
   }
 }
 
 @media (max-width: 480px) {
   .titleform {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Reduz ainda mais o tamanho da fonte do título do formulário em telas muito pequenas */
   }
 
   .icone {
-    width: 10rem;
-    height: 10rem;
+    width: 10rem; /* Reduz a largura do ícone em telas muito pequenas */
+    height: 10rem; /* Reduz a altura do ícone em telas muito pequenas */
   }
 
   .maps {
-    height: 12rem;
+    height: 12rem; /* Reduz ainda mais a altura do mapa em telas muito pequenas */
   }
 }
