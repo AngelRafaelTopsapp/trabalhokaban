@@ -1,0 +1,292 @@
+/* Estilos gerais */
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.title {
+  margin: 0%;
+  color: white;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+nav ul li a:hover {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 0.2rem solid #464846;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+/* Seção Welcome */
+#welcome {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Estilo do Banner */
+#banner img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+#carrossel {
+  padding: 20px;
+}
+
+/* Estilo para o container das imagens */
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  overflow-x: auto;
+  gap: 4rem;
+  padding: 10px;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 0.2rem solid #45a049;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+picture img {
+  width: 22rem;
+  height: 16rem;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+figcaption h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+figcaption p {
+  font-size: 0.8rem;
+  margin: 5px 0 0;
+}
+
+/* Formulário */
+#contato {
+  padding: 4rem;
+}
+.icone {
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.iconelinks {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+.dados {
+  display: flex;
+  justify-content: center;
+  border: 0.2rem solid #45a049;
+  background-color: #dfe8f0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.titleform {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.informaContatos {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.mapa {
+  padding: 2rem;
+}
+.maps {
+  width: 100%;
+  height: 80%;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  border: 0.1rem solid #45a049;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #dfe8f0;
+  gap: 1rem;
+  max-width: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 0.1rem solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+button {
+  padding: 0.7rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 12rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Seção Sobre */
+#sobre {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* Garante que o footer fique no fundo da página quando há pouco conteúdo */
+}
+/* Estilo para o layout mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .titleform {
+    font-size: 1.5rem;
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption h2 {
+    font-size: 1.25rem;
+  }
+
+  figcaption p {
+    font-size: 1rem;
+  }
+
+  .container {
+    gap: 2rem;
+    overflow-x: visible;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dados {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .maps {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleform {
+    font-size: 1.25rem;
+  }
+
+  .icone {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .maps {
+    height: 12rem;
+  }
+}
