@@ -244,10 +244,10 @@ button:hover {
   padding: 2rem; /* Adiciona padding interno à seção Sobre */
 }
 
-#politica{
+#politica {
   padding: 2rem;
 }
-#termos{
+#termos {
   padding: 4rem;
 }
 /* Footer */
@@ -261,8 +261,107 @@ footer {
   align-items: center; /* Alinha o conteúdo verticalmente no centro */
   padding: 1rem; /* Padding interno do cabeçalho */
 }
+
+ /* Estilo da seção do Kanban */
+ #kanban {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+/* Estilo do quadro Kanban */
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo das colunas do Kanban */
+.kanban-column {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 300px;
+}
+
+/* Estilo dos títulos das colunas */
+.kanban-column h3 {
+  margin-top: 0;
+  color: #555;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Estilo dos itens do Kanban */
+.kanban-item {
+  background-color: #e1e1e1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores das colunas */
+.kanban-column:nth-child(1) {
+  background-color: #f9f9f9;
+}
+
+.kanban-column:nth-child(2) {
+  background-color: #eaf7ff;
+}
+
+.kanban-column:nth-child(3) {
+  background-color: #e6ffe6;
+}
+
+.kanban-column:nth-child(4) {
+  background-color: #fff0f0;
+}
+
+/* Estilo da tabela de relatório */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.report-table th, .report-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+
 /* Estilo para o layout mobile */
 @media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+  }
+
+  .kanban-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
   header {
     flex-direction: column; /* Alinha os itens do cabeçalho verticalmente em telas menores */
     text-align: center; /* Centraliza o texto no cabeçalho */

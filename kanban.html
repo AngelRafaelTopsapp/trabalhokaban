@@ -1,22 +1,110 @@
-<section id="kanban">
-    <h2>Controle de Pedidos</h2>
-    <div class="kanban-board">
-        <div class="kanban-column">
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban - Restaurante Pookemon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kanban.html">Kanban</a></li>
+          <li><a href="#carrossel">Pratos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <h1 class="title">Restaurante A Taverna do Dragão</h1>
+    </header>
+    <main>
+      <section id="kanban">
+        <h2>Controle de Pedidos</h2>
+        <div class="kanban-board">
+          <div class="kanban-column">
             <h3>Solicitado</h3>
             <div class="kanban-item">Pedido 1</div>
             <div class="kanban-item">Pedido 2</div>
-        </div>
-        <div class="kanban-column">
+          </div>
+          <div class="kanban-column">
             <h3>Produção</h3>
             <div class="kanban-item">Pedido 3</div>
-        </div>
-        <div class="kanban-column">
+          </div>
+          <div class="kanban-column">
             <h3>Pronto</h3>
             <div class="kanban-item">Pedido 4</div>
-        </div>
-        <div class="kanban-column">
+          </div>
+          <div class="kanban-column">
             <h3>Entregue</h3>
             <div class="kanban-item">Pedido 5</div>
+          </div>
         </div>
-    </div>
-</section>
+
+        <!-- Relatório de Pedidos -->
+        <h3>Relatório de Pedidos</h3>
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>ID do Pedido</th>
+              <th>Cliente</th>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>João da Silva</td>
+              <td>Pizza Margherita</td>
+              <td>Entregue</td>
+              <td>12/09/2024</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Maria Oliveira</td>
+              <td>Hambúrguer Gourmet</td>
+              <td>Pronto</td>
+              <td>12/09/2024</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Pedro Santos</td>
+              <td>Espaguete à Carbonara</td>
+              <td>Produção</td>
+              <td>12/09/2024</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>Laura Costa</td>
+              <td>Sushi Variado</td>
+              <td>Solicitado</td>
+              <td>12/09/2024</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>Lucas Pereira</td>
+              <td>Salada Caesar</td>
+              <td>Entregue</td>
+              <td>11/09/2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <h2>
+        &copy; 2024 Restaurante A Taverna do Dragão. Todos os direitos
+        reservados.
+      </h2>
+      <nav>
+        <ul>
+          <li><a href="/privacidade.html">Política de Privacidade</a></li>
+          <li><a href="/servicos.html">Termos de Serviço</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
