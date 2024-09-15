@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+<!-- Coloca o idoma-->
 <html lang="pt-BR">
+  <!-- Seção de head: local onde é passado os metas dados, dados basicos de responsividade, tipo de caracteres,link para o arquivo de style -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante A Taverna do Dragão - Home</title>
+    <link rel="icon" href="assets/favicon.webp" type="image/x-icon" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Seção de header: um local onde fica o titulo da pagina e os caminhos apra locais na pagina e outras paginas  -->
     <header>
       <nav>
         <ul>
@@ -23,14 +28,14 @@
     </header>
 
     <main id="home">
-      <!-- Seção do Banner -->
+      <!-- Seção do Banner: Local onde é chamado em uma tang a imagem do banner e definido um descrição para assistencia a pessoas que tem problemas visuais -->
       <section id="banner">
         <img
           src="assets/banner.png"
           alt="Banner do Restaurante A Taverna do Dragão"
         />
       </section>
-      <!-- Seção do welcome -->
+      <!-- Seção do welcome: local onde é dado uma breve descrição do site -->
       <section id="welcome">
         <h2>Bem-vindo ao Restaurante A Taverna do Dragão</h2>
         <p>
@@ -45,7 +50,7 @@
         </p>
       </section>
 
-      <!-- Seção do Carrossel -->
+      <!-- Seção do Carrossel: um carrossel de imagem estatico em linha -->
       <section id="carrossel">
         <h2 class="titleform">Pratos em Destaque</h2>
         <div class="container">
@@ -131,7 +136,7 @@
         </div>
       </section>
 
-      <!-- Seção Sobre -->
+      <!-- Seção Sobre: local com uma explicação mais detalhada do site -->
       <section id="sobre">
         <div class="sobre">
           <h2>Sobre o Restaurante A Taverna do Dragão</h2>
@@ -171,7 +176,7 @@
           </p>
         </div>
       </section>
-      <!-- Seção de Formulário -->
+      <!-- Seção de contato: um local onde fica os contatos do site e um mapa junto com o formulario -->
       <section id="contato">
         <h2 class="titleform">Contatos</h2>
         <div class="dados">
@@ -188,12 +193,12 @@
               <strong>Endereço:</strong> Rua dos Dragões, 123 - Vila Medieval,
               SP, Brasil
             </p>
-            <p>
-              <strong>Redes Sociais:</strong><br />
-              <div class="links">
+            <p><strong>Redes Sociais:</strong></p>
+            <div class="links">
               <a
                 href="https://www.facebook.com/atavernadodragao"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   class="iconelinks"
@@ -204,6 +209,7 @@
               <a
                 href="https://www.instagram.com/atavernadodragao"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   class="iconelinks"
@@ -214,15 +220,15 @@
               <a
                 href="https://www.twitter.com/atavernadodragao"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   class="iconelinks"
                   src="assets/whatsapp.png"
-                  alt="whatsapp do Restaurante A Taverna do Dragão"
+                  alt="WhatsApp do Restaurante A Taverna do Dragão"
                 />
               </a>
             </div>
-            </p>
           </div>
           <div class="mapa">
             <h2 class="titleform">Localização</h2>
@@ -232,17 +238,35 @@
               alt="Localização da Restaurante A Taverna do Dragão"
             />
           </div>
-
+          <!-- Seção de Formulário: um formulario para o usuario "enviar" dicas e sugestões  -->
           <form>
             <h2 class="titleform">Envie suas sugestões e dicas</h2>
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              aria-label="Nome"
+              required
+            />
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              aria-label="Nome"
+              required
+            />
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required />
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              aria-label="Nome"
+              required
+            />
 
             <label for="sugestao">Sugestões:</label>
             <textarea
@@ -257,9 +281,11 @@
         </div>
       </section>
     </main>
-
+    <!-- Seção de footer: um local onde tem um texto sobre os direitos autorais e caminhos para as paginas de privacidade e termos de serviço  -->
     <footer>
-      <h2>&copy; 2024 Restaurante A Taverna do Dragão. Todos os direitos reservados.</h2>
+      <p class="footer">
+        2024 Restaurante A Taverna do Dragão. Todos os direitos reservados.
+      </p>
       <nav>
         <ul>
           <li><a href="/privacidade.html">Política de Privacidade</a></li>
