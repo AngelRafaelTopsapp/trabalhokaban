@@ -1,41 +1,48 @@
-# Restaurante A Taverna do Dragão
+# 🐉 Restaurante A Taverna do Dragão 🏰
 
-Bem-vindo ao repositório oficial da página web do **Restaurante A Taverna do Dragão**! Este projeto é uma página web estática com temática medieval, criada para oferecer uma experiência gastronômica épica. Navegue pelas seções da página e descubra os pratos, o ambiente e a história deste restaurante único.
+**Saudações, viajantes e aventureiros!** 
 
-## 🔗 Link para a Página
+Sejam bem-vindos ao **Repositório Sagrado** do nosso honrado estabelecimento, o **Restaurante A Taverna do Dragão**. Aqui, forjamos não apenas refeições, mas também histórias e experiências dignas das mesas dos mais nobres cavaleiros e magos. Esta página web foi cuidadosamente esculpida para oferecer uma visão dos grandes banquetes que nos distinguem em todo o reino.
 
-Acesse a página do restaurante pelo GitHub Pages:  
+## **Este é um projeto para faculdade sem fins lucrativos.**
+
+## 🔗 Portal de Acesso
+
+Acesse nosso grandioso salão digital através deste encantamento:  
 [Restaurante A Taverna do Dragão](https://angelrafaeltopsapp.github.io/trabalhokaban/)
 
-## 📂 Estrutura do Projeto
+## 📜 Crônicas do Projeto
 
-- `index.html`: Página principal do restaurante.
-- `kanban.html`: Página Kanban para o controle de pedidos do restaurante.
-- `assets/`: Pasta com as imagens e ícones usados no site.
-- `style.css`: Arquivo de estilos para a formatação da página.
+- `index.html`: O grande salão, onde todos os visitantes são recebidos.
+- `kanban.html`: O **Salão dos Pedidos**, onde os preparativos das refeições são supervisionados e acompanhados.
+- `assets/`: Tesouros visuais armazenados, contendo brasões, pergaminhos e ilustrações das maravilhas servidas.
+- `style.css`: As vestes elegantes e adornos que conferem beleza ao nosso salão digital.
 
-## 📜 Funcionalidades
+## 🛡️ Funcionalidades da Taverna
 
-- **Home**: Uma introdução ao restaurante com destaque para o ambiente e proposta do lugar.
-- **Kanban**: Sistema visual para o gerenciamento de pedidos (solicitação, produção, pronto e entregue).
-- **Pratos em Destaque**: Carrossel de pratos que apresenta as especialidades medievais do restaurante.
-- **Sobre o Restaurante**: Conheça a história fictícia do Restaurante A Taverna do Dragão, fundado pelo lendário cavaleiro Sir Cedric Dragonheart.
-- **Formulário de Contato**: Área para o envio de sugestões e dicas para o restaurante.
+- **Salão Principal (Home)**: Um convite caloroso ao nosso nobre estabelecimento, com apresentações das maravilhas culinárias e do ambiente medieval.
+- **Salão de Pedidos (Kanban)**: Uma relíquia visual para a gestão dos pedidos, com cada fase desde a solicitação até o prato ser entregue à mesa real.
+- **Banquete dos Heróis (Pratos em Destaque)**: Uma galeria dos manjares mais requintados e nobres servidos na taverna, em um carrossel de delícias.
+- **A História da Taverna**: Conheça as origens lendárias do restaurante, fundado pelo glorioso cavaleiro **Sir Cedric Dragonheart**.
+- **O Pátio do Mensageiro (Formulário de Contato)**: Um portal para os viajantes enviarem suas sugestões e ideias, ajudando a melhorar nossos serviços.
 
-## 🚀 Tecnologias Utilizadas
+## ⚔️ Ferramentas e Magias Utilizadas
 
-- **HTML5**: Para a estruturação da página.
-- **CSS3**: Para o design e responsividade.
-- **GitHub Pages**: Hospedagem da página web.
+- **HTML5**: As runas para estruturar o grande salão da taverna.
+- **CSS3**: O manto que embeleza e traz harmonia às páginas.
+- **GitHub Pages**: O reino onde nossa taverna se manifesta digitalmente para todo o reino.
 
-## 📬 Contato
+## 📨 Contatos de Aliança
 
-Caso tenha alguma dúvida ou sugestão sobre o projeto, entre em contato:
+Entre em contato com a taverna e seus mestres por meio dos seguintes canais:
 
-- **Email**: contato@atavernadodragao.com
-- **Telefone**: (11) 1234-5678
-- **Endereço**: Rua dos Dragões, 123 - Vila Medieval, SP, Brasil
+- **Coruja Mágica (Email)**: contato@atavernadodragao.com
+- **Trombetas Reais (Telefone)**: (11) 1234-5678
+- **Caminho do Dragão (Endereço)**: Rua dos Dragões, 123 - Vila Medieval, SP, Brasil
 
-## 🛡️ Direitos Autorais
+## ⚒️ Direitos Reservados
 
-&copy; 2024 Restaurante A Taverna do Dragão. Todos os direitos reservados.
+&copy; 2024 **Restaurante A Taverna do Dragão**. Todos os direitos reservados. Que os dragões sempre guardem nossas receitas secretas!
+
+## **Este é um projeto para faculdade sem fins lucrativos.**
+
