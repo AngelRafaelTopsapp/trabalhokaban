@@ -40,17 +40,18 @@ nav ul li {
 }
 
 nav ul li a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: white; /* Define a cor dos links como branca */
-  font-weight: bold; /* Define o texto dos links como negrito */
-  font-size: 1.3rem; /* Define o tamanho da fonte dos links */
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  border: 0.1rem solid transparent; /* Aplica uma borda transparente para manter o espaço reservado */
 }
 
 nav ul li a:hover {
-  border-radius: 1rem; /* Arredonda os cantos do link quando o cursor está sobre ele */
-  padding: 1rem; /* Adiciona padding ao link quando o cursor está sobre ele */
-  border: 0.2rem solid #464846; /* Adiciona uma borda ao link quando o cursor está sobre ele */
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao link quando o cursor está sobre ele */
+  border-color: #464846; /* Muda a cor da borda no hover */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 /* Seção Welcome */
@@ -96,6 +97,11 @@ figure {
 picture img {
   width: 22rem; /* Define a largura das imagens dentro do picture */
   height: 16rem; /* Define a altura das imagens dentro do picture */
+  transition: transform 0.2s ease-in-out; /* Transição para o efeito de escala */
+}
+
+picture img:hover {
+  transform: scale(1.1); /* Aumenta a escala da imagem no hover */
 }
 
 figcaption {
@@ -243,12 +249,13 @@ button:hover {
   text-align: center; /* Centraliza o texto na seção Sobre */
   padding: 2rem; /* Adiciona padding interno à seção Sobre */
 }
-
+/* Seção politica */
 #politica {
-  padding: 2rem;
+  padding: 2rem; /* Adiciona padding interno à seção politica */
 }
+/* Seção termos */
 #termos {
-  padding: 4rem;
+  padding: 4rem; /* Adiciona padding interno à seção termos */
 }
 /* Footer */
 footer {
@@ -262,8 +269,8 @@ footer {
   padding: 1rem; /* Padding interno do cabeçalho */
 }
 
- /* Estilo da seção do Kanban */
- #kanban {
+/* Estilo da seção do Kanban */
+#kanban {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -273,7 +280,9 @@ h3 {
   text-align: center;
   color: #333;
 }
-
+.footer {
+  font-size: 1.5rem;
+}
 /* Estilo do quadro Kanban */
 .kanban-board {
   display: flex;
@@ -335,7 +344,8 @@ h3 {
   margin-top: 20px;
 }
 
-.report-table th, .report-table td {
+.report-table th,
+.report-table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
@@ -349,8 +359,6 @@ h3 {
 .report-table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-
 
 /* Estilo para o layout mobile */
 @media (max-width: 768px) {
