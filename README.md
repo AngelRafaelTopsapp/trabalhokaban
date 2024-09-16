@@ -45,4 +45,3 @@ Entre em contato com a taverna e seus mestres por meio dos seguintes canais:
 &copy; 2024 **Restaurante A Taverna do Dragão**. Todos os direitos reservados. Que os dragões sempre guardem nossas receitas secretas!
 
 ## **Este é um projeto para faculdade sem fins lucrativos.**
-
