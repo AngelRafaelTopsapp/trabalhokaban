@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kanban - Restaurante Pookemon</title>
     <link rel="icon" href="assets/favicon.webp" type="image/x-icon" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="stylekaban.css" />
     <!-- Adicione o link do Font Awesome -->
     <link
       rel="stylesheet"
@@ -52,9 +52,35 @@
         </div>
       </section>
 
+      <!-- Modal para editar Pedido -->
+      <div id="orderModalEdit" class="modal">
+        <div class="modal-content">
+          <span id="closeModalEdit" class="close">&times;</span>
+          <h2>Editar Pedido</h2>
+          <form id="orderEditForm">
+            <label for="editOrderDescription">Descrição do Pedido:</label>
+            <input type="text" id="editOrderDescription" required />
+
+            <label for="editOrderType">Tipo:</label>
+            <select id="editOrderType" required>
+              <option value="" disabled selected>Selecione um tipo</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Prato Principal">Prato Principal</option>
+              <option value="Sobremesa">Sobremesa</option>
+              <option value="Bebida">Bebida</option>
+            </select>
+
+            <label for="editOrderQuantity">Quantidade:</label>
+            <input type="number" id="editOrderQuantity" required min="1" />
+
+            <button type="submit">Salvar Alterações</button>
+          </form>
+        </div>
+      </div>
+
       <!-- Seção de Kanban -->
       <section id="kanbanContainer">
-        <h2>Controle de Pedidos</h2>
+        <h2 class="title-kanban">Controle de Pedidos</h2>
         <button id="addOrderButton">
           <i class="fas fa-plus"></i> Adicionar Pedido
         </button>
