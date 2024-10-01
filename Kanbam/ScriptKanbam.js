@@ -6,6 +6,9 @@ const modal = document.getElementById("orderModal");
 const closeModal = document.getElementById("closeModal");
 const addOrderButton = document.getElementById("addOrderButton");
 const orderForm = document.getElementById("orderForm");
+const modalEdit = document.getElementById("orderModalEdit");
+const closeModalEdit = document.getElementById("closeModalEdit");
+const orderEditForm = document.getElementById("orderEditForm");
 
 // Função para carregar pedidos do localStorage
 function loadOrders() {
@@ -51,20 +54,45 @@ function addOrder(event) {
   }
 }
 
-// Função para abrir o modal
+// Função para abrir o modal de adicionar pedido
 function openModal() {
   modal.style.display = "block";
 }
 
-// Função para fechar o modal
+// Função para fechar o modal de adicionar pedido
 function closeModalFunction() {
   modal.style.display = "none";
+}
+
+// Função para abrir o modal de editar pedido
+function openEditModal(orderId) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || {};
+  const order = orders[orderId];
+
+  if (order) {
+    document.getElementById("editOrderDescription").value =
+      order.name.split(" (")[0];
+    document.getElementById("editOrderType").value =
+      order.name.match(/\((.*?)\)/)[1];
+    document.getElementById("editOrderQuantity").value =
+      order.name.match(/Qtd: (\d+)/)[1];
+    modalEdit.style.display = "block";
+
+    // Atualiza o formulário de edição com o ID do pedido
+    orderEditForm.onsubmit = (event) => editOrder(event, orderId);
+  }
+}
+
+// Função para fechar o modal de edição
+function closeEditModal() {
+  modalEdit.style.display = "none";
 }
 
 // Adiciona eventos de clique e submissão
 addOrderButton.addEventListener("click", openModal);
 closeModal.addEventListener("click", closeModalFunction);
 orderForm.addEventListener("submit", addOrder);
+closeModalEdit.addEventListener("click", closeEditModal);
 
 // Função para adicionar um pedido a uma coluna específica
 function addOrderToColumn(orderName, status, orderId) {
@@ -83,7 +111,7 @@ function addOrderToColumn(orderName, status, orderId) {
   const editButton = document.createElement("button");
   editButton.className = "edit-button";
   editButton.innerHTML = `<i class="fas fa-pencil-alt"></i>`;
-  editButton.onclick = () => editOrder(orderId);
+  editButton.onclick = () => openEditModal(orderId); // Abre o modal de edição
 
   const removeButton = document.createElement("button");
   removeButton.className = "remove-button";
@@ -160,22 +188,34 @@ function removeOrder(orderId) {
 }
 
 // Função para editar um pedido
-function editOrder(orderId) {
-  const orders = JSON.parse(localStorage.getItem("orders")) || {};
-  const order = orders[orderId];
+function editOrder(event, orderId) {
+  event.preventDefault(); // Impede o envio do formulário
 
-  if (order) {
-    const newOrderName = prompt("Edite o nome do pedido:", order.name);
-    if (newOrderName) {
-      const itemToEdit = document.getElementById(orderId);
-      if (itemToEdit) {
-        itemToEdit.childNodes[0].nodeValue = newOrderName;
+  const orderDescription = document
+    .getElementById("editOrderDescription")
+    .value.trim();
+  const orderType = document.getElementById("editOrderType").value;
+  const orderQuantity = document.getElementById("editOrderQuantity").value;
 
-        // Atualiza o nome no localStorage
-        orders[orderId].name = newOrderName;
-        localStorage.setItem("orders", JSON.stringify(orders));
-      }
+  if (orderDescription && orderType && orderQuantity) {
+    const updatedOrderName = `${orderDescription} (${orderType}) - Qtd: ${orderQuantity}`;
+    const itemToEdit = document.getElementById(orderId);
+
+    if (itemToEdit) {
+      itemToEdit.childNodes[0].nodeValue = updatedOrderName;
+
+      // Atualiza o nome no localStorage
+      const orders = JSON.parse(localStorage.getItem("orders")) || {};
+      orders[orderId].name = updatedOrderName;
+      localStorage.setItem("orders", JSON.stringify(orders));
+
+      alert(`Pedido editado: ${updatedOrderName}`);
+      console.log("Pedido editado:", updatedOrderName);
     }
+
+    closeEditModal();
+  } else {
+    alert("Por favor, preencha todos os campos.");
   }
 }
 
