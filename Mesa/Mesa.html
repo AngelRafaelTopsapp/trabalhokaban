@@ -59,28 +59,40 @@
             </div>
             <div>
               <button type="submit">Salvar Pedido</button>
-              <button type="button" id="clearButton" class="clean-button-pedido">Limpar</button>
-              <button type="button" id="closeButton" class="close-button-pedido">
+              <button
+                type="button"
+                id="clearButton"
+                class="clean-button-pedido"
+              >
+                Limpar
+              </button>
+              <button
+                type="button"
+                id="closeButton"
+                class="close-button-pedido"
+              >
                 Fechar
               </button>
             </div>
           </form>
           <!-- Linhas de pedidos serão adicionadas aqui -->
           <h3 class="orders-title">Pedidos:</h3>
-          <table id="ordersTable" class="orders-table">
-            <thead class="table-header">
-              <tr class="header-row">
-                <th class="header-cell">Mesa</th>
-                <th class="header-cell">Tipo</th>
-                <th class="header-cell">Prato</th>
-                <th class="header-cell">Quantidade</th>
-                <th class="header-cell">Acompanhamento</th>
-                <th class="header-cell">Bebida</th>
-                <th class="header-cell">Quantidade</th>
-              </tr>
-            </thead>
-            <tbody class="table-body"></tbody>
-          </table>
+          <div class="maxtable">
+            <table id="ordersTable" class="orders-table">
+              <thead class="table-header">
+                <tr class="header-row">
+                  <th class="header-cell">Mesa</th>
+                  <th class="header-cell">Tipo</th>
+                  <th class="header-cell">Prato</th>
+                  <th class="header-cell">Quantidade</th>
+                  <th class="header-cell">Acompanhamento</th>
+                  <th class="header-cell">Bebida</th>
+                  <th class="header-cell">Quantidade</th>
+                </tr>
+              </thead>
+              <tbody class="table-body"></tbody>
+            </table>
+          </div>
         </div>
       </div>
     </main>

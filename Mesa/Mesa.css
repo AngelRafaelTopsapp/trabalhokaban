@@ -179,36 +179,42 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-
 /* Estilo para o título da tabela */
 .orders-title {
   font-size: 24px; /* Tamanho da fonte */
   margin-bottom: 16px; /* Margem inferior */
   text-align: center; /* Centraliza o texto */
+} /* Estilo do contêiner da tabela */
+.maxtable {
+  overflow-x: auto; /* Permite rolagem horizontal */
+  margin: 1rem; /* Margem para afastar do restante do conteúdo */
+  border-radius: 8px; /* Arredondamento nos cantos */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o contêiner */
 }
 
-/* Estilo para a tabela */
+/* Estilo da tabela */
 .orders-table {
   width: 100%; /* Largura total */
   border-collapse: collapse; /* Colapsa as bordas */
-  margin: 0 auto; /* Centraliza a tabela */
+  table-layout: auto; /* Permite que as colunas se ajustem automaticamente */
 }
 
-/* Estilo para o cabeçalho da tabela */
+/* Estilo do cabeçalho da tabela */
 .table-header {
   background-color: #4caf50; /* Cor de fundo do cabeçalho */
-  color: white; /* Cor do texto */
+  color: white; /* Cor do texto do cabeçalho */
 }
 
-/* Estilo para as células do cabeçalho */
+/* Estilo das células do cabeçalho */
 .header-row {
   height: 50px; /* Altura da linha do cabeçalho */
 }
 
-/* Estilo para as células do cabeçalho */
 .header-cell {
   padding: 12px; /* Espaçamento interno */
   text-align: left; /* Alinhamento à esquerda */
+  font-weight: bold; /* Negrito */
+  border-bottom: 2px solid #388e3c; /* Borda inferior mais espessa */
 }
 
 /* Estilo para o corpo da tabela */
@@ -225,9 +231,33 @@ button[type="submit"]:hover {
 .table-body td {
   padding: 10px; /* Espaçamento interno */
   border: 1px solid #ddd; /* Borda das células */
+  text-align: left; /* Alinhamento à esquerda */
 }
 
 /* Estilo para o hover das células */
 .table-body tr:hover {
   background-color: #ddd; /* Cor de fundo ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .header-cell,
+  .table-body td {
+    font-size: 12px; /* Tamanho menor para cabeçalhos e células */
+    padding: 6px; /* Diminui o padding */
+  }
+
+  h1 {
+    font-size: 24px; /* Menor tamanho de fonte para o título */
+  }
+
+  #addTableButton {
+    width: 90%; /* Botão ocupa toda a largura */
+    padding: 10px; /* Aumenta o padding */
+  }
+
+  .modal-content {
+    width: 80%; /* Largura da modal em telas pequenas */
+    overflow: auto;
+  }
 }
