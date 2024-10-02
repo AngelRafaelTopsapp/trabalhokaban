@@ -21,9 +21,7 @@ const beverageQuantityInput = document.getElementById("beverage-quantity");
 const orders = {}; // Objeto para armazenar pedidos por mesa
 
 // Função para adicionar uma nova mesa
-addTableButton.addEventListener("click", () => {
-  addTable();
-});
+addTableButton.addEventListener("click", addTable);
 
 // Função para adicionar mesa
 function addTable() {
@@ -53,15 +51,7 @@ function openModal(tableCard) {
   const tableId = tableCard.getAttribute("data-id"); // Obtém o ID da mesa
   editModal.style.display = "block";
   populateTableSelect(); // Popula as mesas no modal
-  specificDishContainer.style.display = "none";
-  quantityContainer.style.display = "none";
-  beverageContainer.style.display = "none";
-  beverageQuantityContainer.style.display = "none";
-  quantityInput.value = "";
-  specificDishSelect.innerHTML = "";
-  beverageSelect.innerHTML = "";
-
-  // Atualiza a tabela de pedidos no modal
+  resetModalFields(); // Reseta campos do modal
   updateOrdersTable(tableId);
 }
 
@@ -106,9 +96,21 @@ function updateOrdersTable(tableId) {
   });
 }
 
+// Função para resetar campos do modal
+function resetModalFields() {
+  specificDishContainer.style.display = "none";
+  quantityContainer.style.display = "none";
+  beverageContainer.style.display = "none";
+  beverageQuantityContainer.style.display = "none";
+  quantityInput.value = "";
+  specificDishSelect.innerHTML = "";
+  beverageSelect.innerHTML = "";
+}
+
 // Adiciona evento para fechar o modal
 closeModalButton.addEventListener("click", () => {
   editModal.style.display = "none";
+  resetModalFields(); // Reseta campos ao fechar o modal
 });
 
 // Habilita ou desabilita o seletor de pratos e quantidade baseado no tipo de prato
@@ -120,31 +122,27 @@ dishTypeSelect.addEventListener("change", () => {
     specificDishContainer.style.display = "block";
     quantityContainer.style.display = "block";
 
-    // Adiciona pratos com base no tipo
-    if (selectedDish === "peixe") {
-      specificDishSelect.innerHTML += `
-        <option value="salmão">Salmão</option>
-        <option value="tilápia">Tilápia</option>
-        <option value="bacalhau">Bacalhau</option>
-      `;
-    } else if (selectedDish === "prato") {
-      specificDishSelect.innerHTML += `
-        <option value="lasanha">Lasanha</option>
-        <option value="espaguete">Espaguete</option>
-        <option value="pizza">Pizza</option>
-      `;
-    } else if (selectedDish === "carne") {
-      specificDishSelect.innerHTML += `
-        <option value="picanha">Picanha</option>
-        <option value="frango">Frango</option>
-        <option value="costela">Costela</option>
-      `;
-    }
+    addDishOptions(selectedDish); // Adiciona pratos com base no tipo
   } else {
-    specificDishContainer.style.display = "none";
-    quantityContainer.style.display = "none";
+    resetModalFields();
   }
 });
+
+// Função para adicionar opções de pratos
+function addDishOptions(selectedDish) {
+  const dishes = {
+    peixe: ["salmão", "tilápia", "bacalhau"],
+    prato: ["lasanha", "espaguete", "pizza"],
+    carne: ["picanha", "frango", "costela"],
+  };
+
+  dishes[selectedDish].forEach((dish) => {
+    const option = document.createElement("option");
+    option.value = dish;
+    option.textContent = dish.charAt(0).toUpperCase() + dish.slice(1);
+    specificDishSelect.appendChild(option);
+  });
+}
 
 // Adiciona evento para habilitar ou desabilitar o seletor de bebidas e quantidade baseado no tipo de acompanhamento
 sideSelect.addEventListener("change", () => {
@@ -155,24 +153,27 @@ sideSelect.addEventListener("change", () => {
     beverageContainer.style.display = "block";
     beverageQuantityContainer.style.display = "block";
 
-    // Adiciona bebidas com base no tipo
-    if (selectedSide === "alcoólico") {
-      beverageSelect.innerHTML += `
-        <option value="cerveja">Cerveja</option>
-        <option value="vinho">Vinho</option>
-      `;
-    } else if (selectedSide === "não alcoólico") {
-      beverageSelect.innerHTML += `
-        <option value="refrigerante">Refrigerante</option>
-        <option value="suco">Suco</option>
-        <option value="agua">Água</option>
-      `;
-    }
+    addBeverageOptions(selectedSide); // Adiciona bebidas com base no tipo
   } else {
     beverageContainer.style.display = "none";
     beverageQuantityContainer.style.display = "none";
   }
 });
+
+// Função para adicionar opções de bebidas
+function addBeverageOptions(selectedSide) {
+  const beverages = {
+    alcoólico: ["cerveja", "vinho"],
+    "não alcoólico": ["refrigerante", "suco", "agua"],
+  };
+
+  beverages[selectedSide].forEach((beverage) => {
+    const option = document.createElement("option");
+    option.value = beverage;
+    option.textContent = beverage.charAt(0).toUpperCase() + beverage.slice(1);
+    beverageSelect.appendChild(option);
+  });
+}
 
 // Função para enviar o formulário (adicionar lógica para processar o pedido)
 editForm.addEventListener("submit", (e) => {
@@ -198,4 +199,40 @@ editForm.addEventListener("submit", (e) => {
 
   // Fecha o modal após enviar
   editModal.style.display = "none";
+});
+// Obtém o botão de limpar
+const clearButton = document.getElementById("clearButton");
+
+// Adiciona evento para o botão de limpar
+clearButton.addEventListener("click", () => {
+  // Limpa o seletor de mesas
+  const tableSelect = document.getElementById("table-select");
+  tableSelect.selectedIndex = 0;
+
+  // Limpa o seletor de tipo de prato
+  dishTypeSelect.selectedIndex = 0;
+  specificDishSelect.innerHTML = ""; // Limpa os pratos específicos
+  specificDishContainer.style.display = "none";
+  quantityContainer.style.display = "none";
+
+  // Limpa o seletor de acompanhamento
+  sideSelect.selectedIndex = 0;
+  beverageSelect.innerHTML = ""; // Limpa as bebidas
+  beverageContainer.style.display = "none";
+  beverageQuantityContainer.style.display = "none";
+
+  // Limpa os campos de quantidade
+  quantityInput.value = "";
+  beverageQuantityInput.value = "";
+});
+// Adiciona evento para fechar o modal
+closeModalButton.addEventListener("click", () => {
+  editModal.style.display = "none";
+  resetModalFields(); // Reseta campos ao fechar o modal
+});
+
+// Adiciona evento para o botão "Fechar" dentro do modal
+document.getElementById("closeButton").addEventListener("click", () => {
+  editModal.style.display = "none"; // Fecha o modal
+  resetModalFields(); // Limpa os campos do modal
 });
