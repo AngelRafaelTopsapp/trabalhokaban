@@ -12,7 +12,12 @@
   <body>
     <!-- Seção de header: um local onde fica o titulo da pagina e os caminhos apra locais na pagina e outras paginas  -->
     <header>
-      <nav>
+      <h1 class="title">Restaurante A Taverna do Dragão</h1>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        &#9776;
+        <!-- Ícone de menu (três linhas) -->
+      </button>
+      <nav class="nav">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="./Kanbam/kanban.html">Kanban</a></li>
@@ -20,11 +25,8 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="./Mesa/Mesa.html">Mesas</a></li>
           <li><a href="#contato">Contato</a></li>
-          <li><a href="privacidade.html">Política de Privacidade</a></li>
-          <li><a href="servicos.html">Termos de Serviço</a></li>
         </ul>
       </nav>
-      <h1 class="title">Restaurante A Taverna do Dragão</h1>
     </header>
 
     <main id="home">
@@ -293,5 +295,14 @@
         </ul>
       </nav>
     </footer>
+    <script>
+      // Script para toggle do menu
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active"); // Adiciona ou remove a classe active
+      });
+    </script>
   </body>
 </html>

@@ -9,14 +9,12 @@ body {
   flex-direction: column; /* Alinha os itens no eixo vertical */
   min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
 }
-
 /* Estilo do cabeçalho */
 header {
   background-color: #333; /* Cor de fundo escura para o cabeçalho */
   text-align: center; /* Centraliza o texto no cabeçalho */
   display: flex; /* Usa o modelo de layout flexível para o cabeçalho */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  gap: 10rem; /* Espaço entre os itens do cabeçalho */
+  justify-content: space-between; /* Espaça entre título e botão */
   align-items: center; /* Alinha o conteúdo verticalmente no centro */
   padding: 1rem; /* Padding interno do cabeçalho */
 }
@@ -26,7 +24,21 @@ header {
   color: white; /* Define a cor do texto do título como branca */
 }
 
+/* Botão do menu */
+.menu-toggle {
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  color: white; /* Cor do texto */
+  font-size: 2rem; /* Tamanho do ícone do menu */
+  cursor: pointer; /* Cursor de ponteiro */
+  display: none; /* Esconde o botão por padrão */
+}
+
 /* Navegação */
+nav {
+  display: flex; /* Usa o modelo de layout flexível para a nav */
+}
+
 nav ul {
   list-style-type: none; /* Remove os marcadores da lista */
   margin: 0; /* Remove a margem padrão da lista */
@@ -40,20 +52,19 @@ nav ul li {
 }
 
 nav ul li a {
-  padding: 1rem;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
-  border-radius: 1rem;
-  border: 0.1rem solid transparent; /* Aplica uma borda transparente para manter o espaço reservado */
+  padding: 1rem; /* Padding interno dos links */
+  text-decoration: none; /* Remove sublinhado */
+  color: white; /* Cor do texto */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 1.3rem; /* Tamanho da fonte dos links */
+  border-radius: 1rem; /* Bordas arredondadas */
+  border: 0.1rem solid transparent; /* Borda transparente para manter o espaço reservado */
 }
 
 nav ul li a:hover {
   border-color: #464846; /* Muda a cor da borda no hover */
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona sombra ao hover */
 }
-
 /* Seção Welcome */
 #welcome {
   text-align: center; /* Centraliza o texto na seção Welcome */
@@ -289,14 +300,6 @@ h3 {
   text-align: center;
 }
 
-/* Estilo geral do footer */
-footer {
-  background-color: #333; /* Cor de fundo do footer */
-  color: white; /* Cor do texto */
-  padding: 1rem; /* Espaçamento interno */
-  text-align: center; /* Centraliza o texto */
-}
-
 /* Estilo dos parágrafos do footer */
 .footer {
   margin: 0.5rem 0; /* Margem entre parágrafos */
@@ -330,7 +333,6 @@ footer a {
 footer a:hover {
   text-decoration: underline; /* Sublinha ao passar o mouse */
 }
-/* Estilo para o layout mobile */
 @media (max-width: 768px) {
   .kanban-board {
     flex-direction: column;
@@ -341,8 +343,36 @@ footer a:hover {
     margin-bottom: 20px;
   }
   header {
-    flex-direction: column; /* Alinha os itens do cabeçalho verticalmente em telas menores */
-    text-align: center; /* Centraliza o texto no cabeçalho */
+
+    gap: 2rem; /* Espaçamento entre os itens */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o botão do menu em telas menores */
+  }
+
+  nav {
+    display: none; /* Esconde a navegação padrão */
+    width: 100%; /* O nav ocupa toda a largura */
+  }
+
+  nav.active {
+    display: block; /* Mostra a nav quando ativa */
+    background-color: #333; /* Cor de fundo para o dropdown */
+    position: absolute; /* Posiciona o dropdown corretamente */
+    top: 60px; /* Ajuste conforme a altura do cabeçalho */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1000; /* Garante que o dropdown fique acima de outros elementos */
+  }
+
+  nav ul {
+    flex-direction: column; /* Alinha os itens da lista em coluna */
+    gap: 1rem; /* Espaço reduzido entre os itens */
+  }
+
+  nav ul li a {
+    font-size: 1.1rem; /* Reduz o tamanho da fonte dos links */
+    padding: 0.75rem; /* Diminui o padding dos links */
   }
 
   .titleform {
@@ -383,8 +413,8 @@ footer a:hover {
   footer {
     display: flex;
     flex-wrap: wrap;
-    padding: 0%; 
-    margin: 0%;/* Diminui o padding em telas pequenas */
+    padding: 0%;
+    margin: 0%; /* Diminui o padding em telas pequenas */
     gap: 0;
   }
 
@@ -425,8 +455,21 @@ footer a:hover {
   footer {
     display: flex;
     flex-wrap: wrap;
-    padding: 0%; 
-    margin: 0%;/* Diminui o padding em telas pequenas */
+    padding: 0%;
+    margin: 0%; /* Diminui o padding em telas pequenas */
     gap: 0;
+  }
+
+  header {
+    padding: 0.5rem; /* Diminui o padding do cabeçalho */
+  }
+
+  .title {
+    font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  nav ul li a {
+    font-size: 1rem; /* Reduz ainda mais o tamanho da fonte dos links */
+    padding: 0.5rem; /* Diminui o padding dos links */
   }
 }
