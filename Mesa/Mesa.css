@@ -136,6 +136,34 @@ button[type="submit"]:hover {
   background-color: #005b48; /* Tom mais escuro ao passar o mouse */
 }
 
+.close-button-pedido {
+  background-color: #ff9306; /* Verde escuro */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin-top: 10px; /* Espaço acima do botão */
+}
+
+.close-button-pedido:hover {
+  background-color: #bf6e04; /* Tom mais escuro ao passar o mouse */
+}
+
+.clean-button-pedido {
+  background-color: #ff0000; /* Verde escuro */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 10px 15px; /* Espaçamento interno */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  margin-top: 10px; /* Espaço acima do botão */
+}
+
+.clean-button-pedido:hover {
+  background-color: #a90404; /* Tom mais escuro ao passar o mouse */
+}
+
 /* Estilo do botão de fechar */
 .close-button {
   color: #aaa;
@@ -150,6 +178,8 @@ button[type="submit"]:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+
 /* Estilo para o título da tabela */
 .orders-title {
   font-size: 24px; /* Tamanho da fonte */
