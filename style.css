@@ -288,6 +288,48 @@ h3 {
 .titlePages {
   text-align: center;
 }
+
+/* Estilo geral do footer */
+footer {
+  background-color: #333; /* Cor de fundo do footer */
+  color: white; /* Cor do texto */
+  padding: 1rem; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo dos parágrafos do footer */
+.footer {
+  margin: 0.5rem 0; /* Margem entre parágrafos */
+}
+
+/* Estilo da navegação do footer */
+nav {
+  margin: 1rem 0; /* Margem superior e inferior */
+}
+
+/* Estilo das listas do footer */
+footer ul {
+  list-style: none; /* Remove marcadores de lista */
+  padding: 0; /* Remove padding padrão */
+  display: flex; /* Alinha os itens em uma linha */
+  justify-content: center; /* Centraliza os itens */
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+/* Estilo dos itens da lista */
+footer li {
+  margin: 0 1rem; /* Margem lateral entre os itens */
+}
+
+/* Estilo dos links */
+footer a {
+  color: #4caf50; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
 /* Estilo para o layout mobile */
 @media (max-width: 768px) {
   .kanban-board {
@@ -336,7 +378,25 @@ h3 {
     height: 15rem; /* Reduz a altura do mapa em telas menores */
   }
 }
+/* Responsividade */
+@media (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0%; 
+    margin: 0%;/* Diminui o padding em telas pequenas */
+    gap: 0;
+  }
 
+  footer ul {
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  footer li {
+    margin: 0.5rem 0; /* Margem vertical entre os itens */
+  }
+}
 @media (max-width: 480px) {
   .titleform {
     font-size: 1.25rem; /* Reduz ainda mais o tamanho da fonte do título do formulário em telas muito pequenas */
@@ -361,5 +421,12 @@ h3 {
   .kanban-column {
     width: 100%;
     margin-bottom: 20px;
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0%; 
+    margin: 0%;/* Diminui o padding em telas pequenas */
+    gap: 0;
   }
 }
