@@ -1,6 +1,6 @@
 /* Estilos gerais */
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif; /* Define a fonte geral da página */
+  font-family: "Poppins", sans-serif;/* Define a fonte geral da página */
   margin: 0; /* Remove a margem padrão */
   padding: 0; /* Remove o padding padrão */
   box-sizing: border-box; /* Inclui padding e border na largura e altura dos elementos */
@@ -105,13 +105,12 @@ figure {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao redor do figure */
 }
 
-picture img {
+img {
   width: 22rem; /* Define a largura das imagens dentro do picture */
   height: 16rem; /* Define a altura das imagens dentro do picture */
   transition: transform 0.2s ease-in-out; /* Transição para o efeito de escala */
 }
-
-picture img:hover {
+img:hover {
   transform: scale(1.1); /* Aumenta a escala da imagem no hover */
 }
 
@@ -126,12 +125,13 @@ figcaption {
     0,
     0.6
   ); /* Define o fundo do figcaption com uma cor preta semi-transparente */
-  color: #fff; /* Define a cor do texto do figcaption como branca */
+  /* Define a cor do texto do figcaption como branca */
   padding: 10px; /* Adiciona padding interno ao figcaption */
   text-align: center; /* Centraliza o texto dentro do figcaption */
 }
 
-figcaption h2 {
+figcaption h3 {
+  color: #fff; 
   font-size: 1rem; /* Define o tamanho da fonte do título dentro do figcaption */
   margin: 0; /* Remove a margem do título */
 }
@@ -139,6 +139,7 @@ figcaption h2 {
 figcaption p {
   font-size: 0.8rem; /* Define o tamanho da fonte do parágrafo dentro do figcaption */
   margin: 5px 0 0; /* Adiciona uma margem ao parágrafo */
+  color: #fff; 
 }
 
 /* Formulário */
@@ -379,12 +380,12 @@ footer a:hover {
     font-size: 1.5rem; /* Reduz o tamanho da fonte do título do formulário em telas menores */
   }
 
-  picture img {
+  img {
     width: 100%; /* Ajusta a largura da imagem do carrossel para 100% em telas menores */
     height: auto; /* Ajusta a altura da imagem do carrossel para manter a proporção */
   }
 
-  figcaption h2 {
+  figcaption h3 {
     font-size: 1.25rem; /* Reduz o tamanho da fonte do título do figcaption em telas menores */
   }
 
