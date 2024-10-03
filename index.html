@@ -8,11 +8,14 @@
     <title>Restaurante A Taverna do Dragão - Home</title>
     <link rel="icon" href="assets/favicon.webp" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Seção de header: um local onde fica o titulo da pagina e os caminhos apra locais na pagina e outras paginas  -->
     <header>
-      <h1 class="title">Restaurante A Taverna do Dragão</h1>
       <button class="menu-toggle" aria-label="Abrir menu">
         &#9776;
         <!-- Ícone de menu (três linhas) -->
@@ -21,12 +24,12 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="./Kanbam/kanban.html">Kanban</a></li>
-          <li><a href="#carrossel">Pratos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
           <li><a href="./Mesa/Mesa.html">Mesas</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
+      <h1 class="title">Restaurante A Taverna do Dragão</h1>
     </header>
 
     <main id="home">
@@ -56,15 +59,14 @@
       <section id="carrossel">
         <h2 class="titleform">Pratos em Destaque</h2>
         <div class="container">
+          <!-- Exemplo de um único bloco otimizado -->
           <figure>
-            <picture>
-              <img
-                src="assets/caldeiracarneiro.jpeg"
-                alt="Imagem do prato Caldeirada de Carneiro"
-              />
-            </picture>
+            <img
+              src="assets/caldeiracarneiro.jpeg"
+              alt="Imagem do prato Caldeirada de Carneiro"
+            />
             <figcaption>
-              <h2>Caldeirada de Carneiro</h2>
+              <h3>Caldeirada de Carneiro</h3>
               <p>
                 Ensopado de carneiro cozido com cenouras, nabos, cebolas e
                 ervas, em um caldo saboroso e espesso, servido com fatias
@@ -72,30 +74,29 @@
               </p>
             </figcaption>
           </figure>
+
+          <!-- Repetição dos demais pratos -->
           <figure>
-            <picture>
-              <img
-                src="assets/frangoalecrim.jpeg"
-                alt="Imagem do prato Frango na Brasa com Mel e Alecrim"
-              />
-            </picture>
+            <img
+              src="assets/frangoalecrim.jpeg"
+              alt="Imagem do prato Frango na Brasa com Mel e Alecrim"
+            />
             <figcaption>
-              <h2>Frango na Brasa com Mel e Alecrim</h2>
+              <h3>Frango na Brasa com Mel e Alecrim</h3>
               <p>
                 Um frango inteiro grelhado, temperado com mel e alecrim, com uma
                 crosta dourada e sabor agridoce, acompanhado de legumes assados.
               </p>
             </figcaption>
           </figure>
+
           <figure>
-            <picture>
-              <img
-                src="assets/perniljavali.jpeg"
-                alt="Imagem do prato Pernil de Javali Assado"
-              />
-            </picture>
+            <img
+              src="assets/perniljavali.jpeg"
+              alt="Imagem do prato Pernil de Javali Assado"
+            />
             <figcaption>
-              <h2>Pernil de Javali Assado</h2>
+              <h3>Pernil de Javali Assado</h3>
               <p>
                 Um corte suculento de pernil de javali, temperado com ervas e
                 especiarias, assado lentamente no forno e servido com batatas
@@ -103,15 +104,14 @@
               </p>
             </figcaption>
           </figure>
+
           <figure>
-            <picture>
-              <img
-                src="assets/paocomlinguica.jpeg"
-                alt="Imagem do prato Pão Rústico com Queijo Derretido e Linguiça"
-              />
-            </picture>
+            <img
+              src="assets/paocomlinguica.jpeg"
+              alt="Imagem do prato Pão Rústico com Queijo Derretido e Linguiça"
+            />
             <figcaption>
-              <h2>Pão com Queijo Derretido e Linguiça</h2>
+              <h3>Pão com Queijo Derretido e Linguiça</h3>
               <p>
                 Fatias de pão rústico levemente tostadas, recheadas com linguiça
                 defumada e queijo derretido, ideal como prato de entrada ou
@@ -119,15 +119,14 @@
               </p>
             </figcaption>
           </figure>
+
           <figure>
-            <picture>
-              <img
-                src="assets/tortadecarne.jpeg"
-                alt="Imagem do prato Torta de Carne com Ervas"
-              />
-            </picture>
+            <img
+              src="assets/tortadecarne.jpeg"
+              alt="Imagem do prato Torta de Carne com Ervas"
+            />
             <figcaption>
-              <h2>Torta de Carne com Ervas</h2>
+              <h3>Torta de Carne com Ervas</h3>
               <p>
                 Torta recheada com carne bovina cozida lentamente com alho,
                 cebola e ervas aromáticas, envolta em uma crosta de massa
@@ -241,8 +240,9 @@
             />
           </div>
           <!-- Seção de Formulário: um formulario para o usuario "enviar" dicas e sugestões  -->
-          <form>
+          <form action="https://formspree.io/f/xlderepr" method="POST">
             <h2 class="titleform">Envie suas sugestões e dicas</h2>
+
             <label for="nome">Nome:</label>
             <input
               type="text"
@@ -257,7 +257,7 @@
               type="email"
               id="email"
               name="email"
-              aria-label="Nome"
+              aria-label="Email"
               required
             />
 
@@ -266,7 +266,7 @@
               type="tel"
               id="telefone"
               name="telefone"
-              aria-label="Nome"
+              aria-label="Telefone"
               required
             />
 

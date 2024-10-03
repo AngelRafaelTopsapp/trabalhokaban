@@ -1,6 +1,6 @@
 # 🐉 Restaurante A Taverna do Dragão 🏰
 
-**Saudações, viajantes e aventureiros!** 
+**Saudações, viajantes e aventureiros!**
 
 Sejam bem-vindos ao **Repositório Sagrado** do nosso honrado estabelecimento, o **Restaurante A Taverna do Dragão**. Aqui, forjamos não apenas refeições, mas também histórias e experiências dignas das mesas dos mais nobres cavaleiros e magos. Esta página web foi cuidadosamente esculpida para oferecer uma visão dos grandes banquetes que nos distinguem em todo o reino.
 
@@ -39,6 +39,8 @@ Entre em contato com a taverna e seus mestres por meio dos seguintes canais:
 - **Coruja Mágica (Email)**: contato@atavernadodragao.com
 - **Trombetas Reais (Telefone)**: (11) 1234-5678
 - **Caminho do Dragão (Endereço)**: Rua dos Dragões, 123 - Vila Medieval, SP, Brasil
+
+- **Envio feito usando**: https://formspree.io
 
 ## ⚒️ Direitos Reservados
 
